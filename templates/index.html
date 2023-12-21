@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Download</title>
+    <style>
+        input[type="text"] {
+            width: 500px; /* Set the width of the text box */
+            height: 55px;
+            padding: 10px; /* Add padding inside the text box */
+            border: 2px solid #f7f6f8; /* Add a border with a color */
+            border-radius: 25px; /* Add rounded corners */
+            box-sizing: border-box; /* Include padding and border in the total width */ 
+            font-size: 20px; /* Set the font size */
+            color: #f5f3f7; /* Set the text color */
+            background-color: #be7cdd;
+            text-align: center;
+            
+        }
+        input[type="text"] ::placeholder{ color:#f5f3f7}
+
+        /* Apply styles to the submit button */
+        .submit {
+            color: #f8f4f4; /* Default color for labels */
+            width: 200px;
+            margin: 0 auto; /* Center the box horizontally */
+            border: 5px solid rgba(190, 119, 248, 0.952); /* Border around specific text */
+            padding: 10px; /* Padding to give space inside the border */
+            text-align: center;
+            border-radius: 10px; /* Rounded corners for the border */
+            font-size: 25px;
+            color: rgb(241, 240, 240); /* Text color inside the border */
+            background-color: #be7cdd;
+            font-weight: 600;
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+        }
+        body {
+            text-align: center;
+            background-color: #be7cdd;
+
+        }
+        form {
+            text-align: center; /* Align form elements to the left */
+            width: 1500px; /* Set a width for the form */
+            height: 900px;
+            margin: 20px auto; /* Center the form horizontally */
+            border: 2px solid #ccc;
+            background-color: rgb(161, 83, 197);
+        }
+        .bordered-text {
+        width: 1000px;
+        margin: 0 auto; /* Center the box horizontally */
+        border: 5px solid rgba(190, 119, 248, 0.952); /* Border around specific text */
+        padding: 35px; /* Padding to give space inside the border */
+        text-align: center;
+        border-radius: 50px; /* Rounded corners for the border */
+        font-size: 59px;
+        color: rgb(241, 240, 240); /* Text color inside the border */
+        background-color: #be7cdd;
+        }
+        .sub-text {
+        width: 350px;
+        margin: 0 auto; /* Center the box horizontally */
+        border: 5px solid rgba(190, 119, 248, 0.952); /* Border around specific text */
+        padding: 20px; /* Padding to give space inside the border */
+        text-align: center;
+        border-radius: 50px; /* Rounded corners for the border */
+        font-size:40px;
+        color: rgb(241, 240, 240); /* Text color inside the border */
+        background-color: #be7cdd;
+        }
+        label {
+            color: #f8f4f4; /* Default color for labels */
+            width: 200px;
+            margin: 0 auto; /* Center the box horizontally */
+            border: 5px solid rgba(190, 119, 248, 0.952); /* Border around specific text */
+            padding: 10px; /* Padding to give space inside the border */
+            text-align: center;
+            border-radius: 10px; /* Rounded corners for the border */
+            font-size: 25px;
+            color: rgb(241, 240, 240); /* Text color inside the border */
+            background-color: #be7cdd;
+            font-weight: 600;
+            }
+        .red-text {
+            color: rgb(228, 156, 156); /* Red color for specific text */
+        }
+
+        .green-text {
+            color: rgb(243, 243, 245); /* Green color for specific text */
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/download" method="post">
+        <br><br>
+        <h1 class="bordered-text">Wanna Download a Youtube Video?</h1><br><br>
+        <h2 class="sub-text">Drop a Link</h2><br><br><br>
+        <label for="textbox">Enter Link:</label><br><br><br>
+        <input type="text" id="textbox" name="linkbox" placeholder="Enter the youtube link here"><br><br><br><br>
+        <label for="textbox">Enter Path:</label><br><br><br>
+        <input type="text" id="textbox" name="path" placeholder="Enter the path ">
+        <!--<h3>OR</h3>
+        <h2>Search for what you want</h2>
+        <label for="textbox">Enetr Search term:</label>
+        <input type="text" id="textbox" name="search" placeholder="Enter the search term here"><br><br>-->
+        <br><br><br>
+        <button class="submit";type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
