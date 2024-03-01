@@ -1,17 +1,21 @@
 from pytube import YouTube
 import os
 from flask import Flask,render_template,request
-def Download(link,output_path):
-    yt=YouTube(link)
-    yt=yt.streams.get_highest_resolution()
+def Download(link, output_path):
     try:
+        yt = YouTube(link)
+        
+        # Get the highest resolution stream
+        yt_stream = yt.streams.filter(file_extension='mp4').get_highest_resolution()
+
         download_path = os.path.join(output_path)
         if not os.path.exists(download_path):
             os.makedirs(download_path)
-        yt.download(output_path=download_path)
-        return 'Download sucessful!'
-    except:
-        return 'An error has occured'
+
+        yt_stream.download(output_path=download_path)
+        return 'Download successful!'
+    except Exception as e:
+        return f'An error occurred: {str(e)}'
 
 '''def Search(Term):
     driver = webdriver.Chrome()
